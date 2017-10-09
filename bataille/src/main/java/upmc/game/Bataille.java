@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 import java.util.Scanner;
 
-public class Bataille {
+public class Bataille {  
     public static void main(String[] args) {
 
         Scanner console = new Scanner(System.in);
@@ -144,13 +144,6 @@ public class Bataille {
 
             decision1 = tools.menu(player2);
 
-            while(decision.equals("error") ||  decision1.equals("error")){
-                System.out.println("Erreur lors de la saisie, veuillez recommencez");
-
-                decision = tools.menu(player1);
-
-                decision1 = tools.menu(player2);
-            }
         }
 
 
