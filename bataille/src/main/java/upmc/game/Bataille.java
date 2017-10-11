@@ -21,7 +21,6 @@ import java.util.Scanner;
 public class Bataille {  
     
     public static void main(String[] args) {
-
         Scanner console = new Scanner(System.in);
         System.out.println("C'est le jeu de la bataille!\n");
         System.out.println("But du jeu : \n Etre le premier à avoir 100 points. \n Vous marquez 1 point dès que vous avez un nombre supérieur à votre adversaire \n Bonne chance :) \n\n");
@@ -35,7 +34,6 @@ public class Bataille {
         System.out.println(deck1);
         System.exit(0);
         
-
         //Init two players
         InitPlayers players = new InitPlayers();
 
@@ -44,28 +42,18 @@ public class Bataille {
         while (nbPlayer == 0) {
             nbPlayer = players.choose_type_player();
         }
-
+        
         players.add_name_players(nbPlayer);
-
         String player1 = InitPlayers.player1;
         String player2 = InitPlayers.player2;
 
-       
-
-        //Création d'un array list en cas de bataille
+        //Create an array id there is War !
         ArrayList<Carte> bataille = new ArrayList<Carte>();
-
-        
-
-
-        
 
         //Distribution des pacquets de carte aux joueurs
         Joueur game1 = new Joueur(deck1, player1);
         Joueur game2 = new Joueur(deck2, player2);
-
         String decision = tools.menu(player1);
-
         String decision1 = tools.menu(player2);
 
         while (decision.equals("") && decision1.equals("")) {
@@ -133,7 +121,6 @@ public class Bataille {
             decision1 = tools.menu(player2);
 
         }
-
 
         if (game1.score() == 100 || game1.score() > game2.score() || game1.view_nb_card()>game2.view_nb_card()) {
             System.out.println("///////////////////////////////\n" +
