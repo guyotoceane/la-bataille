@@ -19,17 +19,24 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Bataille {  
+    
     public static void main(String[] args) {
 
         Scanner console = new Scanner(System.in);
-
         System.out.println("C'est le jeu de la bataille!\n");
-
         System.out.println("But du jeu : \n Etre le premier à avoir 100 points. \n Vous marquez 1 point dès que vous avez un nombre supérieur à votre adversaire \n Bonne chance :) \n\n");
-
         Tools tools = new Tools();
+        
+        // Init game
+        InitGame initgame = new InitGame();
+        initgame.init_game();
+        ArrayList<Carte> deck1 = InitGame.deck1;
+        ArrayList<Carte> deck2 = InitGame.deck2;
+        System.out.println(deck1);
+        System.exit(0);
+        
 
-        //Initialisation des deux joueurs
+        //Init two players
         InitPlayers players = new InitPlayers();
 
         int nbPlayer = players.choose_type_player();
@@ -43,34 +50,15 @@ public class Bataille {
         String player1 = InitPlayers.player1;
         String player2 = InitPlayers.player2;
 
-        // INITIALISATION DU PAQUET DE CARTES
-        ArrayList<Carte> deckPack = new ArrayList<Carte>();
-        ArrayList<Carte> mixDeckPack = new ArrayList<Carte>();
-        ArrayList<Carte> deck1 = new ArrayList<Carte>();
-        ArrayList<Carte> deck2 = new ArrayList<Carte>();
+       
 
         //Création d'un array list en cas de bataille
         ArrayList<Carte> bataille = new ArrayList<Carte>();
 
-        for (int i = 0; i < Carte.cardsColor.length; i++) {
-            for (int j = 0; j < Carte.cardsValues.length; j++) {
-                Carte carte = new Carte(Carte.cardsColor[i], Carte.cardsValues[j]);
-                deckPack.add(carte);
-            }
-        }
+        
 
 
-        // Mélange du pacquet de carte et distribution des cartes
-        for (int k = 0; k < 52; k++) {
-            int random = (int) (Math.random() * (51 - k));
-            mixDeckPack.add(deckPack.get(random));
-            deckPack.remove(deckPack.get(random));
-            if (k % 2 == 0) {
-                deck1.add(mixDeckPack.get(k));
-            } else {
-                deck2.add(mixDeckPack.get(k));
-            }
-        }
+        
 
         //Distribution des pacquets de carte aux joueurs
         Joueur game1 = new Joueur(deck1, player1);
