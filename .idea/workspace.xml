@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="952a6364-7e54-4890-98de-db8392420697" name="Default" comment="Création d'une classe pour la partie">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bataille/src/main/java/upmc/game/Tools.java" afterPath="$PROJECT_DIR$/bataille/src/main/java/upmc/game/Tools.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bataille/src/main/main.iml" afterPath="$PROJECT_DIR$/bataille/src/main/main.iml" />
-    </list>
+    <list default="true" id="952a6364-7e54-4890-98de-db8392420697" name="Default" comment="Création d'une classe pour la partie" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -369,7 +363,7 @@
       <workItem from="1507965831948" duration="154000" />
       <workItem from="1507966001912" duration="62000" />
       <workItem from="1507966846001" duration="22464000" />
-      <workItem from="1508010222184" duration="582000" />
+      <workItem from="1508010222184" duration="771000" />
     </task>
     <task id="LOCAL-00001" summary="Création d'une classe pour la partie">
       <created>1507981061851</created>
@@ -410,7 +404,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23706000" />
+    <option name="totallyTimeSpent" value="23895000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
