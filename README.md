@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # la-bataille
 Jeu de carte "la bataille" dans le cadre du cours Java/UPMC
 
@@ -71,4 +70,4 @@ git checkout master
 git merge upstream/master
 ```
 Source: [synchroniser un fork](https://help.github.com/articles/syncing-a-fork/)
->>>>>>> upstream/master
+
