@@ -1,5 +1,6 @@
 package upmc.game;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 //Classe pour initialiser les joueurs
@@ -33,16 +34,21 @@ public class InitPlayers {
     public void add_name_players(int nblayers){
         Scanner console = new Scanner(System.in);
 
-        System.out.print("Entrez le nom du premier joueur : ");
-        System.out.flush();
-        player1 = console.nextLine();
+        ArrayList<String> pseudo;
 
         if (nblayers == 2){
-            System.out.print("Entrez le nom du deuxième joueur : ");
-            System.out.flush();
-            player2 = console.nextLine();
+            MenuPseudo menu_pseudo = new MenuPseudo();
+            LecturePseudo lecture_pseudo;
+            lecture_pseudo = menu_pseudo.lirePseudo();
+            pseudo = lecture_pseudo.lirePseudo();
+            player1 = pseudo.get(0);
+            player2 = pseudo.get(1);
+
         }
         else{
+            System.out.print("Entrez le nom du premier joueur : ");
+            System.out.flush();
+            player1 = console.nextLine();
             player2 = "Ordinateur";
         }
 

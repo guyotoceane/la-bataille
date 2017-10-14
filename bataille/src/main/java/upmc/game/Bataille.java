@@ -27,7 +27,6 @@ public class Bataille {
 
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
-
         //start of the game (rules, init players, init deck)
         init();
 
