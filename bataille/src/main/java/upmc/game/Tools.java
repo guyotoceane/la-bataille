@@ -12,9 +12,8 @@ public class Tools {
         if (player.equals("Ordinateur")) {
             return "";
         } else {
-            System.out.print(player + ", que voulez vous faire ? \n (1) tirer une carte - appuyer sur entrée \n (2) Quitter le jeu - appuyer que q \n ");
+            System.out.print(player + ", que voulez vous faire ? \n (enter) tirer une carte \n (q) Quitter le jeu - appuyer que q \n ");
             String result = console.nextLine();
-
             return result ;
         }
     }
