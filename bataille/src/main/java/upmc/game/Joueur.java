@@ -12,8 +12,15 @@ public class Joueur {
         this.name = name;
     }
 
-    public Carte viewCarte() {
+    public Carte viewCards() {
         return this.paquet.get(0);
+    }
+
+    //View name
+
+
+    public String viewName() {
+        return this.name;
     }
 
     //Affichage du score
