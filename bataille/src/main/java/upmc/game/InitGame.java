@@ -14,10 +14,10 @@ import java.util.ArrayList;
 public class InitGame {
     // INITIALISATION DU PAQUET DE CARTES
 
-    public static ArrayList<Carte> deckPack = new ArrayList<Carte>();
-    public static ArrayList<Carte> mixDeckPack = new ArrayList<Carte>();
-    public static ArrayList<Carte> deck1 = new ArrayList<Carte>();
-    public static ArrayList<Carte> deck2 = new ArrayList<Carte>();
+    public static ArrayList<Card> deckPack = new ArrayList<Card>();
+    public static ArrayList<Card> mixDeckPack = new ArrayList<Card>();
+    public static ArrayList<Card> deck1 = new ArrayList<Card>();
+    public static ArrayList<Card> deck2 = new ArrayList<Card>();
 
     public InitGame() {
         this.deckPack = deckPack;
@@ -27,10 +27,10 @@ public class InitGame {
     }
 
     public void init_deck() {
-        for (int i = 0; i < Carte.cardsColor.length; i++) {
-            for (int j = 0; j < Carte.cardsValues.length; j++) {
-                Carte carte = new Carte(Carte.cardsColor[i], Carte.cardsValues[j]);
-                deckPack.add(carte);
+        for (int i = 0; i < Card.cardsColor.length; i++) {
+            for (int j = 0; j < Card.cardsValues.length; j++) {
+                Card card = new Card(Card.cardsColor[i], Card.cardsValues[j]);
+                deckPack.add(card);
             }
         }
     }

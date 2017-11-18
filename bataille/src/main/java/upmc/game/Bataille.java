@@ -58,8 +58,8 @@ public class Bataille {
         // Init game
         InitGame initgame = new InitGame();
         initgame.init_game();
-        ArrayList<Carte> deck1 = InitGame.deck1;
-        ArrayList<Carte> deck2 = InitGame.deck2;
+        ArrayList<Card> deck1 = InitGame.deck1;
+        ArrayList<Card> deck2 = InitGame.deck2;
 
         //Init two players
         InitPlayers players = new InitPlayers();

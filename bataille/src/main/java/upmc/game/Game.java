@@ -7,11 +7,11 @@ public class Game {
     private String decision1;
     public static Joueur game1;
     public static Joueur game2;
-    private Carte card1;
-    private Carte card2;
+    private Card card1;
+    private Card card2;
 
     //Create an array id there is War !
-    ArrayList<Carte> bataille = new ArrayList<Carte>();
+    ArrayList<Card> bataille = new ArrayList<Card>();
 
     public Game(Joueur game1, Joueur game2){
         this.game1 = game1;
@@ -23,8 +23,8 @@ public class Game {
     //use a while for execute the game
     public void loop(){
         Tools tools = new Tools();
-        String decision = tools.menu(this.game1.viewName());
-        String decision1 = tools.menu(this.game2.viewName());
+        String decision = tools.menu(this.game1.view_name());
+        String decision1 = tools.menu(this.game2.view_name());
 
         while (decision.equals("") && decision1.equals("")){
             //Cards draw
@@ -42,9 +42,9 @@ public class Game {
                 break;
             }
 
-            decision = tools.menu(this.game1.viewName());
+            decision = tools.menu(this.game1.view_name());
 
-            decision1 = tools.menu(this.game2.viewName());
+            decision1 = tools.menu(this.game2.view_name());
 
         };
     }
@@ -52,8 +52,8 @@ public class Game {
     public String pull(){
         card1 = game1.viewCards();
         card2 = game2.viewCards();
-        return "-------------------------------\n" + this.game1.viewName() + " tire une carte : " + card1 + "\n-------------------------------\n"+
-                this.game2.viewName() + " tire une carte : " + card2 + "\n-------------------------------\n";
+        return "-------------------------------\n" + this.game1.view_name() + " tire une carte : " + card1 + "\n-------------------------------\n"+
+                this.game2.view_name() + " tire une carte : " + card2 + "\n-------------------------------\n";
 
     }
 
@@ -90,15 +90,15 @@ public class Game {
     public String view_result(){
         return "Scores : \n"+
                 "-------------------------------\n"+
-                game1.viewScore() +
-                game2.viewScore();
+                game1.view_score() +
+                game2.view_score();
     }
 
     public String end_message(){
         return "La partie est fini ! \n Voici les scores : \n"+
                 "-------------------------------\n"+
-                this.game1.viewScore()+
-                this.game2.viewScore();
+                this.game1.view_score()+
+                this.game2.view_score();
     }
 
 }

@@ -3,28 +3,28 @@ package upmc.game;
 import java.util.ArrayList;
 
 public class Joueur {
-    private ArrayList<Carte> paquet = new ArrayList<Carte>();
+    private ArrayList<Card> paquet = new ArrayList<Card>();
     private String name;
     private int score_player = 0;
 
-    public Joueur(ArrayList<Carte> paquet, String name) {
+    public Joueur(ArrayList<Card> paquet, String name) {
         this.paquet = paquet;
         this.name = name;
     }
 
-    public Carte viewCards() {
+    public Card viewCards() {
         return this.paquet.get(0);
     }
 
     //View name
 
 
-    public String viewName() {
+    public String view_name() {
         return this.name;
     }
 
     //Affichage du score
-    public String viewScore() {
+    public String view_score() {
 
         if (this.score_player < 0) {
             return this.name + " : " + 0 + "\n" +
@@ -54,7 +54,7 @@ public class Joueur {
     }
 
     //Ajouter des cartes au fond du tas si on a gagné
-    void add_card(Carte card1) {
+    void add_card(Card card1) {
         this.paquet.add(card1);
     }
 
